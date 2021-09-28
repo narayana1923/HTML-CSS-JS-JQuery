@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Restaurant custom attributes</title>
+    <style>
+      table, th,tr,td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 50%;
+        font-size: 20px;
+      }
+      th{
+        background-color: rgb(255, 160, 174);
+      }
+      td{
+        background-color: rgb(251, 206, 213);
+      }
+      td, th{
+        padding: 10px;
+      }
+      body{
+        margin-left: 30%;
+        margin-top: 10%;
+        background-color: lightgray;
+      }
+      h1{
+        margin-left: 8%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 data-msg="Welcome to Narayana's Restaurant" onclick="showPopUp(this)">Narayana's Restaurant</h1>
+    <table>
+      <tr>
+        <th data-msg="This is veg section" onclick="showPopUp(this)">Vegetarian</th>
+        <th data-msg="This is non-veg section" onclick="showPopUp(this)">Non-Vegetarian</th>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <span data-msg="This is Starters section" onclick="showPopUp(this)">Starters</span>
+            <li data-msg="Veg nuggets: 10rs" onclick="showPopUp(this)">Veg nuggets</li>
+            <li data-msg="Veg Cutlet: 20rs" onclick="showPopUp(this)">Veg Cutlet</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <span data-msg="This is Starters section" onclick="showPopUp(this)">Starters</span>
+              <li data-msg="Chicken nuggets: 20rs" onclick="showPopUp(this)">Chicken Nuggets</li>
+              <li data-msg="chicken Cutlet: 40rs" onclick="showPopUp(this)">Chicken Cutlet</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <span data-msg="This is Main Course section" onclick="showPopUp(this)">Main Course</span>
+            <li data-msg="Veg Burger: 30rs" onclick="showPopUp(this)">Veg burger</li>
+            <li data-msg="Veg Pizza: 40rs" onclick="showPopUp(this)">veg pizza</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <span data-msg="This is Main Course section" onclick="showPopUp(this)">Main Course</span>
+            <li data-msg="Chicken Burger: 50rs" onclick="showPopUp(this)">Chicken burger</li>
+            <li data-msg="Chicken Pizza: 70rs" onclick="showPopUp(this)">Chicken pizza</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+    <script>
+      function showPopUp(attributes){
+        var message = attributes.getAttribute("data-msg");
+        alert(message);
+      }
+    </script>
+  </body>
+</html>

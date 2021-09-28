@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Deactivation Form</title>
+  </head>
+  <body style="background-color: beige">
+    <form
+      style="
+        font-family: Verdana;
+        margin-left: 35%;
+        margin-right: 33%;
+        margin-top: 10%;
+      "
+    >
+      <fieldset style="height: 200px">
+        <legend>Deactivation Form</legend><br><br>
+        <label for="reason">Reason for Deactivation:</label>
+        <select id="reason" name="reason">
+          <option value="interest">Not Interested</option>
+          <option value="distracting">Too distracting</option>
+          <option value="ads">Too many ads</option>
+          <option value="break">Just need a break</option>
+          <option value="specified">Not Specified</option></select
+        ><br /><br />
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Enter password"
+        />
+        <input
+          id="cpassword"
+          name="cpassword"
+          type="password"
+          placeholder="Confirm password"
+        /><br /><br />
+        <button>Deactivate</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

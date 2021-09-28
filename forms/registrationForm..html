@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Registration Page</title>
+  </head>
+  <body style="background-color: lightgoldenrodyellow">
+    <h1>Enter Your Details</h1>
+    <form action="loginForm.html" style="font-family: Arial; margin-right:900px">
+      <fieldset style="border: 3px solid grey;">
+          <br>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          required
+          placeholder="Enter First Name"
+          style="height: 30px; width: 200px; border-color: thistle"
+        />
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          required
+          placeholder="Enter Last Name"
+          style="
+            height: 30px;
+            width: 200px;
+            margin-left: 10px;
+            border-color: thistle;
+          "
+        /><br /><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Enter Email"
+          style="height: 30px; border-color: thistle"
+          size="50"
+        /><br /><br />
+        <label for="gender">Choose Gender: </label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="others">Prefered not to specify</option>
+        </select><br><br>
+        <label for="age">Enter Age: </label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          required
+          style="height: 25px; border-color: thistle"
+          placeholder="age"
+        /><br /><br />
+        <label for="code">Country code: </label>
+        <input
+          type="text"
+          id="code"
+          name="code"
+          required
+          style="height: 25px; border-color: thistle"
+          size="3"
+          placeholder="code"
+        />
+        <input
+          type="text"
+          id="number"
+          name="number"
+          required
+          placeholder="Enter Mobile Number"
+          style="height: 25px; border-color: thistle"
+          size="15"
+          maxlength="10"
+        /><br /><br /><br>
+        <input type="submit" value="Register" style="margin-left: 30px;">
+        <input type="reset" value="Clear" style="margin-left: 30px;">
+      </fieldset>
+    </form>
+  </body>
+</html>
