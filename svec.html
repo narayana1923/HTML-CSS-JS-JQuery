@@ -2,10 +2,10 @@
   <head>
     <title>Home - Sree Vidyanikethan Engineering College</title>
     <style>
-      ul {
+      .list ul {
         float: right;
       }
-      li {
+      .list li {
         display: inline;
         font-size: 18px;
       }
@@ -34,8 +34,104 @@
       }
       .footer {
         background-color: #27334f;
+        color: white;
         padding: 5px;
-        height: 500px;
+        height: 400px;
+        width: 100%;
+      }
+      .leftFoot {
+        float: left;
+      }
+      .leftFoot hr {
+        margin-left: 60px;
+        width: 115%;
+      }
+      .rightFoot {
+        margin-right: 80px;
+        float: right;
+      }
+      .rightFoot hr {
+        margin-right: 10px;
+        width: 100%;
+      }
+      .rightFoot ul {
+        font: 14px Roboto, Sans-serif;
+      }
+      .list1 {
+        margin-left: 65px;
+        float: left;
+        font: 14px Roboto, Sans-serif;
+      }
+      .list1 li {
+        padding: 3px;
+      }
+      .footHead {
+        font: 24px Roboto, Sans-serif;
+        font-weight: 600;
+        text-align: center;
+      }
+      .bottom {
+        margin-top: 28%;
+        text-align: center;
+        background-color: #101d3c;
+        font-size: 14px;
+        padding-bottom: 6px;
+        padding-top: 6px;
+      }
+      .section1 {
+        width: 310px;
+        background-color: lightgray;
+        border: 1px solid red;
+        margin-top: 8px;
+      }
+      .section1 article {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        background-color: white;
+      }
+      .section1 img {
+        width: 280px;
+        height: 152px;
+        border-radius: 10px;
+      }
+      .articles {
+        float: left;
+        margin-left: 10%;
+      }
+      aside{
+        margin-top: 10px;
+        margin-left: 35%;
+        border: 1px lightcoral solid;
+        border-collapse: collapse;
+      }
+      span {
+        font-size: 15px roboto, Sans-serif;
+        margin-left: 10%;
+        font-weight: bold;
+        color: #27334f;
+      }
+      aside >h1{
+        margin-top: 1px;
+        background-color: lightcoral;
+        padding: 10px;
+        width: 845px;
+      }
+      p {
+        font: 16x Roboto, Sans-serif;
+        margin-left: 10px;
+        line-height: 18px;
+        color: #27334f;
+      }
+      button {
+        background-color: #27334f;
+        font-size: 13px;
+        margin-left: 190px;
+        font-weight: bold;
+        color: white;
+        border-radius: 2px;
+        padding: 10px;
+        margin-bottom: 5px;
       }
     </style>
   </head>
@@ -47,56 +143,58 @@
           alt="vidyanikethan logo"
         />
       </div>
-      <div>
-        <ul>
-          <li>Site Search</li>
-          <li class="slash">\</li>
-          <li>A-Z Directory</li>
-          <li class="slash">\</li>
-          <li>Gallery</li>
-          <li class="slash">\</li>
-          <li>Careers</li>
-          <li class="slash">\</li>
-          <li>Alumni</li>
-          <li class="slash">\</li>
-          <li>Student/Parent Login</li>
-          <li class="slash">\</li>
-          <li>Academic Verification</li>
-          <li class="slash">\</li>
-          <li>Contact Us</li>
-        </ul>
-      </div>
-      <div id="seclist">
-        <ul>
-          <li>+91-877-3066900</li>
-          <li>info@vidyanikethan.edu</li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li>AP EAPCET / ICET / PGCET / POLYCET Counseling Code: SVNE</li>
-        </ul>
-      </div>
-      <div id="nav">
-        <ul>
-          <li>About Us</li>
-          <li class="pipe">|</li>
-          <li>Admissions</li>
-          <li class="pipe">|</li>
-          <li>Academics</li>
-          <li class="pipe">|</li>
-          <li>Exams</li>
-          <li class="pipe">|</li>
-          <li>Research & Consultancy</li>
-          <li class="pipe">|</li>
-          <li>Innovation & Entrepreneurship</li>
-          <li class="pipe">|</li>
-          <li>Training & Placements</li>
-          <li class="pipe">|</li>
-          <li>Industry Relations</li>
-          <li class="pipe">|</li>
-          <li>Campus Life</li>
-        </ul>
+      <div class="list">
+        <div class="firList">
+          <ul>
+            <li>Site Search</li>
+            <li class="slash">\</li>
+            <li>A-Z Directory</li>
+            <li class="slash">\</li>
+            <li>Gallery</li>
+            <li class="slash">\</li>
+            <li>Careers</li>
+            <li class="slash">\</li>
+            <li>Alumni</li>
+            <li class="slash">\</li>
+            <li>Student/Parent Login</li>
+            <li class="slash">\</li>
+            <li>Academic Verification</li>
+            <li class="slash">\</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div id="seclist">
+          <ul>
+            <li>+91-877-3066900</li>
+            <li>info@vidyanikethan.edu</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>AP EAPCET / ICET / PGCET / POLYCET Counseling Code: SVNE</li>
+          </ul>
+        </div>
+        <div id="nav">
+          <ul>
+            <li>About Us</li>
+            <li class="pipe">|</li>
+            <li>Admissions</li>
+            <li class="pipe">|</li>
+            <li>Academics</li>
+            <li class="pipe">|</li>
+            <li>Exams</li>
+            <li class="pipe">|</li>
+            <li>Research & Consultancy</li>
+            <li class="pipe">|</li>
+            <li>Innovation & Entrepreneurship</li>
+            <li class="pipe">|</li>
+            <li>Training & Placements</li>
+            <li class="pipe">|</li>
+            <li>Industry Relations</li>
+            <li class="pipe">|</li>
+            <li>Campus Life</li>
+          </ul>
+        </div>
       </div>
     </header>
     <div>
@@ -134,8 +232,174 @@
         55 Offers with a salary of above 3.5 LPA
       </marquee>
     </div>
+    <div>
+      <img
+        src="https://www.svec.education/wp-content/uploads/2020/07/svec-slide-1-100x50.jpg"
+        width="1098px"
+        height="595 px"
+      />
+    </div>
+    <div class="articles">
+      <section class="section1">
+        <article>
+          <div>
+            <img
+              src="https://www.svec.education/wp-content/uploads/2020/02/dr-mohan-babu-chairman.jpg"
+            />
+          </div>
+          <span>MESSAGE FROM CHAIRMAN</span>
+          <p>
+            Sree Vidyanikethan Education Trust (SVET) was established in 1992,
+            it has surpassed many a milestone. As an individual, I have the best
+            memories and biggest learning experiences…
+          </p>
+          <button>Read More</button>
+        </article>
+      </section>
+      <section class="section1">
+        <article>
+          <div>
+            <img
+              src="https://www.svec.education/wp-content/uploads/2020/02/ceo-vishnu-manchu.jpg"
+            />
+          </div>
+          <span>MESSAGE FROM CEO</span>
+          <p>
+            Whilst Sree Vidyanikethan has marked its successful Silver Jubilee
+            in the field of Education, I express my heartfelt gratitude for all
+            your continued support..
+          </p>
+          <button>Read More</button>
+        </article>
+      </section>
+    </div>
+    <aside>
+      <h1>Notifications</h1>
+      <ul>
+        <li>Academic Calendar 2020-2021 for II-Semester MCA</li>
+        <li>
+          Mode of instructions (Classes, Taining, Events etc.,) till 03.07.2021
+        </li>
+        <li>
+          Online Webinar & Workshop on 7th International Yoga Day: ‘Yoga and
+          Life Management Skills’ from 21st to 23rd June from 9:30 AM to 10:30
+          AM
+        </li>
+        <li>
+          Mode of instructions (Classes, Taining, Events etc.,) till 26.06.2021
+        </li>
+        <li>Mode of instructions (Classes, events etc.,) till 12.06.2021</li>
+        <li>
+          AICTE Training And Learning (ATAL) Academy Sponsored Faculty
+          Development Programme on “Mean Stack Technologies”, 21st – 25th
+          September, 2021
+        </li>
+        <li>
+          AICTE Training And Learning (ATAL) Academy Sponsored Faculty
+          Development Programme on “Environment and Sustainability: Need of the
+          day”, 13th – 17th September, 2021
+        </li>
+        <li>
+          AICTE Training And Learning (ATAL) Academy Sponsored Faculty
+          Development Programme on “Futuristic Electric Transportation Systems”,
+          20th – 24th September, 2021
+        </li>
+        <li>Academic Calendar 2021-22 for III B.Tech I-Semester</li>
+        <li>Academic Calendar 2021-22 for IV B.Tech I-Semester</li>
+        <li>Academic Calendar 2021-22 for MCA V-Semester</li>
+        <li>Academic Calendar 2020-21 for MCA II-Semester (Revised)</li>
+      </ul>
+    </aside>
+    <aside>
+      <h1>Upcoming Events</h1>
+      <ul>
+        <li>
+          AICTE Training And Learning (ATAL) Academy Sponsored Faculty
+          Development Programme on “Futuristic Electric Transportation Systems”,
+          20th – 24th September, 2021
+        </li>
+        <li>
+          Faculty Development Programme on “Emerging trends in Automotive and
+          Energy Systems”
+        </li>
+        <li>Skill Development Training and Capacity Building Program</li>
+        <li>
+          AICTE Training And Learning (ATAL) Academy Sponsored Faculty
+          Development Programme on “Futuristic Electric Transportation Systems”,
+          20th – 24th September, 2021
+        </li>
+        <li>
+          Faculty Development Programme on “Emerging trends in Automotive and
+          Energy Systems”
+        </li>
+        <li>Skill Development Training and Capacity Building Program</li>
+      </ul>
+    </aside>
     <footer class="footer">
-      <div></div>
+      <div class="leftFoot">
+        <h4 class="footHead">Quick Links</h4>
+        <hr />
+        <div class="list1">
+          <ul>
+            <li>Admission - Indian Nationals</li>
+            <li>Admission - Foreign Nationals</li>
+            <li>Sports & Games</li>
+            <li>Health & Wellness</li>
+            <li>NSS</li>
+            <li>MGNCRE</li>
+            <li>Student Council</li>
+            <li>Alumni</li>
+          </ul>
+        </div>
+        <div class="list1">
+          <ul>
+            <li>Fee Payments</li>
+            <li>Library</li>
+            <li>Facilities</li>
+            <li>Dispensary</li>
+            <li>PMKVY</li>
+            <li>Annual Reports</li>
+            <li>AICTE</li>
+            <li>SVEI</li>
+          </ul>
+        </div>
+        <div class="list1">
+          <ul>
+            <li>Anti-Ragging</li>
+            <li>Policy Documents</li>
+            <li>Campus Green</li>
+            <li>Mandatory Disclosure</li>
+            <li>Best Practices</li>
+            <li>Grievance Redressal</li>
+            <li>NAAC</li>
+            <li>NBA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rightFoot">
+        <h4 class="footHead">Contact Us</h4>
+        <hr />
+        <ul type="none">
+          <li>Sree Vidyanikethan Engineering College</li>
+          <li>Sree Sainath Nagar,</li>
+          <li>Tirupati,</li>
+          <li>Chitoor (District),</li>
+          <li>Andhra Pradesh - 517502.</li>
+          <li>INDIA</li>
+          <br />
+          <li>+91-877-2504888</li>
+          <br />
+          <li>+91-916-0999977</li>
+          <br />
+          <li>svecp@vidyanikethan.edu</li>
+          <br />
+        </ul>
+      </div>
+      <div class="bottom">
+        ©2020 Sree Vidyanikethan Engineering College. All Rights Reserved.
+        Designed and Developed by
+        <a href="http://okatti.com/">Okatti Media and Designs</a>
+      </div>
     </footer>
   </body>
 </html>

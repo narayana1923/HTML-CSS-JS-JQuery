@@ -1,105 +1,219 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Table 3</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Time Table</title>
+
         <style>
-            body{
-                background-color: rgb(243, 243, 243);
-            }
-            th{
-            border: 1px solid white;
-            border-radius: 8px;
-            padding: 15px;
-            background-color: rgb(123, 218, 60);
-            color:white;
-            }
-            #table1
-            {
-                margin-top: -150px;
-                margin-left: 100px;
-                margin-right: 200px;
-                background-color: white;
-            }
-            td{
-                text-align: center;
-                padding: 15px;
-                border: 0.5px solid white;
-                font-size: 20px;
-                background-color: rgba(149, 212, 107, 0.904);
-            }
-            table{
-                margin-left: 100px;
-                margin-right: 50px;
-                margin-top: 200px;
-                background-color: white;
-                border-collapse: collapse;
-                width: 60%;
-                font-family: Arial, Helvetica, sans-serif;
-            }
+        body {
+            margin-top: 2%;
+            margin-right: 15%;
+            margin-left: 15%;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5vw;
+        }
+        h2,h4,h3 {
+            font-family: "Lucida Sans","Lucida Sans Unicode";
+            margin-top: -15px;
+        }
+        #h2{
+          font-size: 1.8vw;
+        }
+        #h4{
+          font-size: 1.2vw;
+        }
+        .heads {
+            text-align: center;
+            margin-top: -100px;
+        }
+        th {
+            border: 1px solid black;
+            text-align: center;
+            height: 45px;
+            width: 200px;
+            background-color: silver;
+        }
+        td {
+            border: 1px solid black;
+            text-align: center;
+            height: 5px;
+            width: 450px;
+            padding: 5px;
+        }
+        #table1{
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #table2 {
+            border-collapse: collapse;
+            height: 15px;
+            width: 110%;
+            padding: 5px;
+            margin-left: -5%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #he1{
+          font-size: 1.4vw;
+          font-weight: bold;
+
+        }
+        #he2{
+          font-size: 1.4vw;
+          font-weight: bold;
+          text-align: right;
+          margin-top: -53px;
+        }
+        #p1{
+          text-align: center;
+          font-weight: bold;
+          margin-top: -50px;
+        }
+        #p2{
+          text-align: right;
+          font-weight: bold;
+          margin-top: -50px;
         }
         </style>
+
     </head>
     <body>
-        <div id="table1">
-        <table>
-            <tr>
-                <th></th>
-                <th>Smart Starter</th>
-                <th>Smart Mediam</th>
-                <th>Smart Business</th>
-                <th>Smart Deluxe</th>
-            </tr>
-            <tr>
-                <th>Storage Space</th>
-                <td>512 MB</td>
-                <td>1 GB</td>
-                <td>2 GB</td>
-                <td>4 GB</td>
-            </tr>
-            <tr>
-                <th>Bandwidth</th>
-                <td>512 MB</td>
-                <td>1 GB</td>
-                <td>2 GB</td>
-                <td>4 GB</td>
-            </tr>
-            <tr>
-                <th>MySQL Databases</th>
-                <td>512 MB</td>
-                <td>1 GB</td>
-                <td>2 GB</td>
-                <td>4 GB</td>
-            </tr>
-            <tr>
-                <th>Setup</th>
-                <td>512 MB</td>
-                <td>1 GB</td>
-                <td>2 GB</td>
-                <td>4 GB</td>
-            </tr>
-            <tr>
-                <th>PHP 5</th>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-            </tr>
-            <tr>
-                <th>Ruby on Ralls</th>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-            </tr>
-            <tr>
-                <th style="background-color: white; color: black;">Price per month</th>
-                <td style="background-color: white; color: rgb(122, 192, 17); font-size: 35px;" >$ 564</td>
-                <td style="background-color: white; color: rgb(122, 192, 17); font-size: 35px;" >$ 564</td>
-                <td style="background-color: white; color: rgb(122, 192, 17); font-size: 35px;" >$ 564</td>
-                <td style="background-color: white; color: rgb(122, 192, 17); font-size: 35px;" >$ 564</td>
-
-            </tr>
-        </table>
+    <div>
+      <p id="he1">ROOM NO:711</p>
+      <p id="he2">W.E.F:01-09-2021</p>
     </div>
-    </body>
+    <center>
+      <table id="table1">
+        <tr>
+          <th>DAY/HR</th>
+          <th>09.00 AM <br />TO<br />10.00 AM</th>
+          <th>10.00 AM <br />TO<br />11.00 AM </th>
+          <th rowspan="6"><b>b<br />r<br />e<br />a<br />k</b></th>
+          <th>11.30 AM <br />TO<br />12.30 PM</th>
+          <th>12.30 PM <br />TO<br />01.30 PM</th>
+          <th rowspan="6">
+            <b>L<br />u<br />n<br />c<br />h<br /><br />b<br />r<br />e<br />a<br />k</b></th>
+          <th>02.45 PM <br />TO<br />03.45 PM</th>
+          <th>03.45 PM <br />TO<br />04.45 PM</th>
+        </tr>
+        <tr>
+          <th>MON</th>
+          <td>WT</td>
+          <td>AI</td>
+          <td>IOT</td>
+          <td>CN</td>
+          <td>UHV</td>
+          <td>MC/ST</td>
+        </tr>
+        <tr>
+          <th>TUE</th>
+          <td>MC/ST</td>
+          <td>AI</td>
+          <td>CN</td>
+          <td>OE</td>
+          <td colspan="2">WT LAB</td>
+        </tr>
+        <tr>
+          <th>WED</th>
+          <td>IOT</td>
+          <td>CN</td>
+          <td>WT</td>
+          <td>OE</td>
+          <td>MC/ST</td>
+          <td>AI</td>
+        </tr>
+        <tr>
+          <th>THU</th>
+          <td colspan="2">CN LAB</td>
+          <td>WT</td>
+          <td>OE</td>
+          <td>AI</td>
+          <td>IOT</td>
+        </tr>
+        <tr>
+          <th>FRI</th>
+          <td>AI</td>
+          <td>CN</td>
+          <td>MC/ST</td>
+          <td>WT</td>
+          <td>IOT</td>
+          <td>UHV</td>
+        </tr>
+      </table>
+      <br />
+      <br />
+      <!-- skip from here to -->
+        <table id="table2">
+          <tr>
+            <td colspan="2"></td>
+            <td lass="th2"><b>SUBJECT CODE</b></td>
+            <td class="th2"><b>SUBJECT NAME</b></td>
+            <td class="th2"><b>FACULTY NAME</b></td>
+          </tr>
+          <tr>
+            <td colspan="2"> <b>AI</b> </td>
+            <td>19BT50502</td>
+            <td>Artificial Intelligence</td>
+            <td>Dr. C. Anitha</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b>WT</b></td>
+            <td>19BT51202</td>
+            <td>Web Technologies</td>
+            <td>Mr. P.Yogendra Prasad</td>
+          </tr>
+          <tr>
+            <td rowspan="2"><b>PE-1</b></td>
+            <td>MC</td>
+            <td>191BT40501</td>
+            <td>Computer Networks</td>
+            <td>Dr. C. Madhusudhana Rao</td>
+          </tr>
+          <tr>
+            <td>ST</td>
+            <td>19BT51501</td>
+            <td>Modern Cryptography</td>
+            <td>Dr. C. Siva Kumar</td>
+          </tr>
+          <tr>
+            <td colspan="5" style="text-align: left"><b>OE-1</b></td>
+          </tr>
+          <tr>
+            <td colspan="2"><b>IOT </b>(IDE-1)</td>
+            <td>19BT51208</td>
+            <td>IoT Architecture and Protocols</td>
+            <td>Ms. S. Anbu Lakshmi</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b>CN LAB</b></td>
+            <td>19BT40531</td>
+            <td>Computer Networks Lab</td>
+            <td>Dr. C. Madhusudhana Rao</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b>WT LAB</b></td>
+            <td>19BT51232</td>
+            <td>Web Technologies Lab</td>
+            <td>Mr. P.Yogendra Prasad</td>
+          </tr>
+          <tr>
+            <td colspan="2"><b>UHV</b></td>
+            <td>19BT5MC01</td>
+            <td>Universal Human Values</td>
+            <td>Dr. C. Siva Kumar</td>
+          </tr>
+        </table>
+        <!-- here -->
+        <br>
+        <br>
+        <br><br>
+       <div>
+         <p style="text-align:left; font-weight:bold;">TT COORDINATOR</p>
+         <P id="p1">HOD</P>
+         <P id="p2">PRINCIPAL</P>
+        </div>
+    </center>
+  </body>
 </html>
