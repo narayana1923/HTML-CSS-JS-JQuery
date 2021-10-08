@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Javascript Methods</title>
+    <style>
+      #result {
+          margin-top: 10%;
+          font-size: 20px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: bolder;
+      }
+      body{
+          margin-left: 35%;
+          margin-top:12%
+      }
+      #button1{
+          margin-left: 50px;
+      }
+      button{
+          margin-left: 10px;
+      }
+    </style>
+    <script>
+      var maths = {
+        a: 0,
+        b: 0,
+        operation: function (operator) {
+          if (operator == "+") {
+            return this.a + this.b;
+          } else if (operator == "-") {
+            return this.a - this.b;
+          } else if (operator == "*") {
+            return this.a * this.b;
+          } else {
+            return this.a / this.b;
+          }
+        },
+      };
+      function setDetails(operator) {
+        maths.a = Number(document.getElementById("a").value);
+        maths.b = Number(document.getElementById("b").value);
+        var result = document.getElementById("result");
+        result.innerHTML = `Result is ${maths.operation(operator)}`;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="content">
+      <input type="text" id="a" placeholder="Enter a value:" />
+      <input type="text" id="b" placeholder="Enter b value:" /><br /><br />
+      <button id='button1' onclick="setDetails('+')">Add</button>
+      <button onclick="setDetails('-')">Sub</button>
+      <button onclick="setDetails('*')">Mul</button>
+      <button onclick="setDetails('/')">Div</button>
+      <div id="result"></div>
+    </div>
+  </body>
+</html>
