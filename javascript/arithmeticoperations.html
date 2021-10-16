@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Arithmetic Operations</title>
+    <style>
+        #a, #b{
+            width: 10%;
+        }
+        #operator{
+            width: 10%;
+        }
+        form{
+            margin-left: 39%;
+            margin-top: 10%;
+        }
+        h1{
+            text-align: center;
+            margin-top: 5%;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+        }
+        body{
+            background-color: gray;
+        }
+    </style>
+    <script>
+        function calculate(){
+            var aValue = Number(a.value);
+            var bValue = Number(b.value);
+            var operatorValue = operator.value;
+            if(operatorValue == '+') alert(aValue + bValue);
+            else if(operatorValue == '-') alert(aValue - bValue);
+            else if(operatorValue == '*') alert(aValue * bValue);
+            else{
+                if(bValue == 0) alert('Denominator cannot be zero');
+                else alert(aValue / bValue);
+            }
+        }
+    </script>
+  </head>
+  <body>
+      <h1>Simple Calculator</h1>
+      <form>
+          <input type="text" name="a" id="a" placeholder="Enter a: " required pattern="[0-9]">
+          <input type="text" name="operator" id="operator" placeholder="operator" required pattern="[\+\*/\-]{1}">
+          <input type="text" name="b" id="b" placeholder="Enter b: " required pattern="[0-9]">
+          <input type="submit" value="Calculate" onclick="calculate()">
+      </form>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>Login Page</title>
+    <script>
+      var num = 1;
+      function clicked() {
+        alert(`Username is ${uname.value} and password is ${pswd.value}`);
+      }
+      function mouseOvered(item) {
+        item.style.border = "2px orange solid";
+      }
+      function mouseOuted(item) {
+        item.style.border = "";
+      }
+      function changeColor(item) {
+        item.style.backgroundColor = "yellow";
+        item.style.color = "white";
+      }
+      function removeColor(item) {
+        item.style.backgroundColor = "";
+        item.style.color = "";
+      }
+      function changeBodyColor() {
+        document.getElementsByTagName("body")[0].style.backgroundColor =
+          num == 1 ? "yellow" : "lightgray";
+        num = !num;
+      }
+    </script>
+  </head>
+  <body
+    style="background-color: lightgray; color: blue"
+    onresize="changeBodyColor()"
+  >
+    <br />
+    <h1 style="margin-left: 430px; font-size: 300%; font-family: sans-serif">
+      Login to your account
+    </h1>
+    <br />
+    <form
+      style="margin-right: 1450px; margin-left: 500px"
+      onsubmit="alert('Logged in successfully')"
+    >
+      <fieldset style="height: 200px; width: 250px; border: 2px dotted black">
+        <legend style="font-size: 25px">Login</legend>
+        <br />
+        <input
+          required
+          style="height: 30px; width: 250px"
+          type="text"
+          id="uname"
+          name="uname"
+          placeholder="Enter username"
+          onmouseover="mouseOvered(this)"
+          onmouseout="mouseOuted(this)"
+          onfocus="changeColor(this)"
+          onblur="removeColor(this)"
+        /><br /><br />
+        <input
+          required
+          style="height: 30px; width: 250px"
+          type="password"
+          id="pswd"
+          name="pswd"
+          placeholder="Enter password"
+          onmouseover="mouseOvered(this)"
+          onmouseout="mouseOuted(this)"
+          onfocus="changeColor(this)"
+          onblur="removeColor(this)"
+        /><br /><br /><br />
+        <input
+          style="height: 30px; width: 100px; margin-left: 55px"
+          type="submit"
+          id="sub"
+          name="sub"
+          value="submit"
+          onclick="clicked()"
+        />
+      </fieldset>
+    </form>
+  </body>
+</html>
