@@ -14,22 +14,26 @@
       }
       function changeColor(item) {
         item.style.backgroundColor = "yellow";
-        item.style.color = "white";
+        item.style.color = "black";
       }
       function removeColor(item) {
         item.style.backgroundColor = "";
         item.style.color = "";
       }
+      function random(number) {
+        return Math.floor(Math.random() * (number+1));
+      }
       function changeBodyColor() {
         document.getElementsByTagName("body")[0].style.backgroundColor =
-          num == 1 ? "yellow" : "lightgray";
-        num = !num;
+          'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
       }
     </script>
   </head>
   <body
     style="background-color: lightgray; color: blue"
     onresize="changeBodyColor()"
+    onload="alert('Page is loaded')"
+    onchange="changeBodyColor()"
   >
     <br />
     <h1 style="margin-left: 430px; font-size: 300%; font-family: sans-serif">

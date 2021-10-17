@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <title>Calculator</title>
+    <script>
+      var previousValue = 0;
+      var op = "";
+      function doOperation(a, operator, b) {
+        if (operator == "+") return a + b;
+        else if (operator == "-") return a - b;
+        else if (operator == "X") return a * b;
+        else {
+          if (b == 0) {
+            display.value = "";
+            alert("Denominator cannot be zero");
+          }
+        }
+      }
+      function clearDisplay() {
+        display.value = "0";
+        previousValue = 0;
+      }
+      function deleteDisplay() {
+        var str = display.value;
+        if (!(str.length == 1 && str == "0"))
+          display.value = str.substring(0, str.length - 1);
+      }
+      function addOperator(operator) {
+        if (op == "") {
+          previousValue = display.value;
+          display.value = "";
+          op = operator;
+        }
+        else{
+          previousValue = doOperation(Number(previousValue),op,Number(display.value));
+          display.value = "";
+          op = operator;
+        }
+      }
+      function addNumber(val) {
+        if (val == "." && display.value.split(".").length == 1) {
+          display.value = Number(display.value + val);
+          display.value += ".";
+        } else if (val != ".") {
+          display.value = Number(display.value + val);
+        }
+      }
+      function showResult() {
+        var currentValue = display.value;
+        display.value = doOperation(
+          Number(previousValue),
+          op,
+          Number(currentValue)
+        );
+      }
+    </script>
+    <style>
+      h1{
+        text-align: center;
+        font-size: 60px;
+        font-family: 'Courier New', Courier, monospace;
+        margin-top: 2%;
+      }
+      table {
+        margin-left: 30%;
+        margin-top: 3%;
+        width: 500px;
+        height: 450px;
+        border: 2px orange solid;
+      }
+      table,
+      th,
+      td,
+      tr {
+        border: 2px black solid;
+        border-collapse: collapse;
+      }
+      button {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: white;
+        font-size: 30px;
+        font-family: cursive;
+      }
+      input {
+        text-align: right;
+        font-size: 50px;
+        width: 100%;
+        height: 100%;
+        font-family: cursive;
+        background-color: rgb(228, 226, 226);
+      }
+      .firstRow {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body bgcolor="gray">
+    <h1>Simple Calculator</h1>
+    <div class="calculator">
+      <table id="calculatorTable">
+        <tr class="firstRow">
+          <td colspan="4">
+            <input type="text" name="display" id="display" disabled value="0" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button onclick="clearDisplay()">AC</button>
+          </td>
+          <td>
+            <button onclick="deleteDisplay()">C</button>
+          </td>
+          <td>
+            <button onclick="addOperator('/')">/</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button onclick="addNumber(7)">7</button>
+          </td>
+          <td>
+            <button onclick="addNumber(8)">8</button>
+          </td>
+          <td>
+            <button onclick="addNumber(9)">9</button>
+          </td>
+          <td>
+            <button onclick="addOperator('X')">x</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button onclick="addNumber(4)">4</button>
+          </td>
+          <td>
+            <button onclick="addNumber(5)">5</button>
+          </td>
+          <td>
+            <button onclick="addNumber(6)">6</button>
+          </td>
+          <td>
+            <button onclick="addOperator('-')">-</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button onclick="addNumber(1)">1</button>
+          </td>
+          <td>
+            <button onclick="addNumber(2)">2</button>
+          </td>
+          <td>
+            <button onclick="addNumber(3)">3</button>
+          </td>
+          <td>
+            <button onclick="addOperator('+')">+</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button onclick="addNumber(0)">0</button>
+          </td>
+          <td>
+            <button onclick="addNumber('.')">.</button>
+          </td>
+          <td colspan="2">
+            <button onclick="showResult()">=</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
