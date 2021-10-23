@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Animation Methods - JS</title>
+        <style>
+            h1{
+                text-align: center;
+                margin-top: 7%;
+            }
+            body{
+                background-color: lightgray;
+            }
+        </style>
+        <script>
+            var posX = 0;
+            var posY = 0;
+            var numberOfMoves = 0;
+            var timer = setInterval(showTimer,1000);
+            setTimeout(createAnime,3000);
+            var animator = null;
+            function showTimer(){
+                timerText.innerHTML = Number(timerText.innerHTML) - 1;
+            }
+            function createAnime(){
+                helloo.innerHTML = 'Web Technologies';
+                helloo.style.textAlign = "unset";
+                helloo.style.marginTop = "0px";
+                clearInterval(timer);
+                timerHeader.style.display = "none";
+                animator = setInterval(moveText,1);
+            }
+            function moveText(){
+                if(posY == 0 && posX != 1100){
+                    posX++;
+                    helloo.style.marginLeft = posX + "px";
+                }
+                else if(posX == 1100 && posY!=570){
+                    posY++;
+                    helloo.style.marginTop = posY + "px" ;
+                }
+                else if(posY == 570 && posX !=0){
+                    posX--;
+                    helloo.style.marginLeft = posX + "px";
+                }
+                else{
+                    posY--;
+                    helloo.style.marginTop = posY+"px";
+                }
+                numberOfMoves++;
+                if(numberOfMoves == 6000){
+                    clearInterval(animator);
+                    var bd = document.getElementsByTagName('body')[0];
+                    bd.style.backgroundColor = "lightgray"
+                    helloo.innerHTML = 'Animator function disabled using clearInterval() method';
+                    helloo.style.marginLeft = "20%";
+                    helloo.style.marginTop = "20%";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="timerHeader"><span id="timerText">3</span>s</h1>
+        <h1 id="helloo">Animation will be started shortly using setTimeout function</h1>
+    </body>
+</html>

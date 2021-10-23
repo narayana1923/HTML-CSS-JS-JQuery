@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>Javascript animations</title>
+    <style>
+      header {
+        height: 20%;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+      }
+      canvas {
+        margin-left: 45%;
+        margin-top: 150px;
+      }
+      .ball {
+        height: 80%;
+        width: 100%;
+      }
+      .guess {
+        margin-left: 30%;
+        font-size: larger;
+        text-shadow: None;
+      }
+      label{
+        color: yellow;
+      }
+      body{
+        text-shadow: 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: lightgray;
+      }
+    </style>
+    <script>
+      var flag = 0;
+      function drawBall() {
+        var circleContext = ball.getContext("2d");
+        if (flag) {
+          if(xinput.value == "" || yinput.value == ""){
+            alert('Enter x and y coordinates');
+            return;
+          }
+          x = Math.floor(Math.random() * 1250 + 1);
+          y = Math.floor(Math.random() * 380 + 1);
+          ball.style.marginLeft = x;
+          ball.style.marginTop = y;
+          if(xinput.value == x && yinput.value == y){
+            result.innerText = 'Your Guess is correct!';
+            result.style.color = 'green';
+          }
+          else{
+            result.innerText = 'Your Guess is incorrect!';
+            result.style.color = 'red';
+          }
+          xinput.value = "";
+          yinput.value = "";
+        } else {
+          flag = 1;
+          circleContext.beginPath();
+          circleContext.arc(45, 45, 35, 0, 2 * Math.PI);
+          circleContext.fillStyle = "red";
+          circleContext.fill();
+          circleContext.stroke();
+        }
+      }
+    </script>
+  </head>
+  <body onload="drawBall()">
+    <header>
+      <h1>Guess where the ball goes and touch it</h1>
+      <div class="guess">
+        <label for="x">Enter coordinates </label>
+        <input type="text" name="x" id="xinput" placeholder="X: " />
+        <input type="text" name="Y" id="yinput" placeholder="Y: " />
+        <span id="result">
+        </span>
+      </div>
+    </header>
+    <div class="ball" id="ballCanvas">
+      <canvas id="ball" width="100px" height="100px" onmouseover="drawBall()">
+        Canvas is not supported
+      </canvas>
+    </div>
+  </body>
+</html>
